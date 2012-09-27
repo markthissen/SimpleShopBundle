@@ -3,7 +3,7 @@
 <div class="row">
     <div class="row span4">
         <h4>View cars by enother vendor:</h4>
-{% include 'TrigSimpleShopBundle::nav.vendors.html.twig' with {'vendors': vendors } %}
+{% include 'TrigSimpleShopBundle::nav.vendors.html.twig' with {'vendors': vendors, 'pathAppend': 'cars' } %}
     </div>
     <div style="text-align: justify" class="row span8">
         <h2 style="position:relative;left:-22px">View cars by <strong>{{ vName}}</strong>:</h2>

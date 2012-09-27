@@ -10,7 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * Trig\SimpleShopBundle\Entity\Car
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="Trig\SimpleShopBundle\Entity\CarRepository")
+ * @ORM\Entity()
  */
 class Car {
 

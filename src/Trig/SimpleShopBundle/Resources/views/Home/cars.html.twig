@@ -4,8 +4,8 @@
     <div class="row span4">
 {% include 'TrigSimpleShopBundle::nav.cars.html.twig' with {'cars': cars } %}
         </div>
-        <div style="text-align: justify" class="row span7 offset1">
-            <h2 style="position:relative;left:-22px">Cars owerview:</h2>
+        <div style="text-align: justify" class="row span8">
+            <h2 style="position:relative;left:-22px">Cars overview:</h2>
             <div class="row">
                 <h3>{{randomCar.name}}</h3>
                 <a href="{{ path('cars', {'slug':randomCar.slug}) }}"><button class="btn btn-warning">view details...</button></a>
@@ -15,9 +15,7 @@
                 <p class="text-info">{{ randomCar.shortDescription }}</p>   
             </div>
             <div class="row">
-                <hr />
-                </h5>Full description:</h5>
-                <p>{{ randomCar.longDescription }}</p>   
+                {% include 'TrigSimpleShopBundle::loop.cars.html.twig' with { 'cars':cars, 'divisible':5}%}
             </div>
         </div>
     </div>

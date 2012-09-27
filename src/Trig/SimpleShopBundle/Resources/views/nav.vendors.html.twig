@@ -1,6 +1,11 @@
 <ul class="nav nav-tabs nav-stacked span4">
+    {% if pathAppend is not defined %}
+        {% set pathAppend = null %}
+        {% else %}
+        {% set pathAppend = '/' ~ pathAppend %}
+        {%  endif %}
 {% for vendor  in vendors %}
         <li><img style="float:left;margin:2px" width="33" src="{{ vendor.logo }}" />
-            <a class="inline" href="{{ path('vendors', {'slug': vendor.slug})}} ">{{ vendor.name }}</a></li>
+            <a class="inline" href="{{ path('vendors', {'slug': vendor.slug}) ~ pathAppend}} ">{{ vendor.name }}</a></li>
 {% endfor %}
     </ul>

@@ -6,6 +6,7 @@
         </div>
         <div style="text-align: justify" class="row span7 offset1">
             <h2 style="position:relative;left:-22px">{{mainVendor.name}}</h2>
+            <a style="position: relative;left:-22px"class="btn btn-primary" href="{{path('vendors', {'slug':mainVendor.slug, 'cars': "cars"})}}">View cars by this venor</a>
             <div class="row">
                 <hr />
                 <img style="float:left;margin:10px 10px 0 0"src="{{ mainVendor.logo }}" />
