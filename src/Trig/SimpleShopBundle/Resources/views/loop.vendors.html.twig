@@ -1,4 +1,10 @@
 {% set loopIndex = 0 %}
+{%if divisible is not defined%}
+{% set divisible = 4 %}
+{% endif %}
+{% if span is not defined %}
+{% set span = 2 %}
+{% endif %}
 <ul class="thumbnails">
         {% for venor in vendors %}
         {% if loopIndex is not divisibleby(4) and loopIndex != 0 %}

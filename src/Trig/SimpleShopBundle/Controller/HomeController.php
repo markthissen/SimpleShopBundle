@@ -14,15 +14,17 @@ class HomeController extends Controller {
     }
 
     public function vendorsAction($slug, $cars) {
-         $vendors = $this->_getVendors();
-         $vendor = $this->getDoctrine()->getRepository('TrigSimpleShopBundle:Vendor')
+        $vendors = $this->_getVendors();
+        $vendor = $this->getDoctrine()->getRepository('TrigSimpleShopBundle:Vendor')
                 ->findOneBy(array('slug' => $slug));
-         if("none" !== $cars){
-             $carsByVendor = $this->getDoctrine()->getRepository('TrigSimpleShopBundle:Car')
-                     ->findCarsByVendorName($vendor->getName());
-             return $this->render('TrigSimpleShopBundle:Home:vendor.cars.html.twig', 
-                     array('cars' => $carsByVendor));
-         }
+        if ("none" !== $cars) {
+            $carsByVendor = $this->getDoctrine()->getRepository('TrigSimpleShopBundle:Vendor')
+                    ->getCarsByVendorName($vendor->getName());
+            return $this->render('TrigSimpleShopBundle:Home:vendor.cars.html.twig', array(
+                        'cars' => $carsByVendor,
+                        'vendors' => $vendors,
+                        'vName' => $vendor->getName()));
+        }
         if ("none" === $slug) {
             $vendorIds = array();
             foreach ($vendors as $vendor) {

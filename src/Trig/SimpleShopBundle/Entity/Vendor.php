@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * Trig\SimpleShopBundle\Entity\Vendor
  *
  * @ORM\Table()
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Trig\SimpleShopBundle\Entity\VendorRepository")
  */
 class Vendor {
 
