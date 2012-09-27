@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs nav-stacked span4">
+{% for vendor  in vendors %}
+        <li><img style="float:left;margin:2px" width="33" src="{{ vendor.logo }}" />
+            <a class="inline" href="{{ path('vendors', {'slug': vendor.slug})}} ">{{ vendor.name }}</a></li>
+{% endfor %}
+    </ul>
