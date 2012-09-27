@@ -1,0 +1,21 @@
+{% extends 'TrigSimpleShopBundle::layout.html.twig' %}
+{% block content %}
+{% block hero %}
+<div class="hero-unit">
+    <h1>SimpleShop</h1>
+    <p>This is simple project bult on Symfony2 php framework. Project represents car cellling on-line shop.</p>
+    <p><a href="{{ path('vendors') }}" class="btn btn-primary btn-large">Vendors overview</a></p>
+    <p><a href="{{ path('_admin_login') }}" class="btn btn-navbar">Admin entrance</a></p>
+</div>
+{% endblock %}
+<div class="row">
+    <div class="span6">
+        <h3>Pick vendor:</h3>
+            {% include 'TrigSimpleShopBundle::loop.vendors.html.twig' with {'vendors': vendors} %}
+    </div>
+    <div class="span6">
+        <h3>Pick car:</h3>
+            {% include 'TrigSimpleShopBundle::loop.cars.html.twig' with {'cars': cars} %}
+    </div>
+</div>
+{% endblock %}

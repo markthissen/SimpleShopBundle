@@ -1,0 +1,8 @@
+parameters:
+#    trig_simple_shop.example.class: Trig\SimpleShopBundle\Example
+
+services:
+     trig_simple_shop.twig.extension:
+        class: Trig\SimpleShopBundle\Twig\TrigsExtension
+        tags:
+          - { name : twig.extension }

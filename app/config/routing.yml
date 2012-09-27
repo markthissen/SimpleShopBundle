@@ -1,0 +1,6 @@
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
+TrigSimpleShopBundle_routing:
+    resource:  "@TrigSimpleShopBundle/Resources/config/routing.yml"

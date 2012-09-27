@@ -1,0 +1,50 @@
+<?php
+
+namespace Trig\SimpleShopBundle\DataFixtures\ORM;
+
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Trig\SimpleShopBundle\Entity\Car;
+
+class CarAstonMartinDBSV12 extends AbstractFixture implements OrderedFixtureInterface{
+    
+    public function load(ObjectManager $manager) {
+        $car = new Car();
+        $car->setName('Aston Martin DBS V12');
+        $car->setPrice('144000');
+        $car->setImage("/bundles/trigsimpleshop/img/am/minimized/mnmz_AstonMartin rapid.jpg");
+        $lDesc = <<< LDESC
+   The DBS is equipped with 5935 cc V12 engine with four valves per cylinder. The same engine is also used in the DBR9 and DBRS9 racing cars albeit with extensive modifications. The engine of the DBS produces 510 horsepower (380 kW) at 6500 rpm and 570 N·m (420 lb·ft) of torque @ 5750 rpm with a compression ratio of 10.9:1. The engine also includes an active bypass valve which above 5500 rpm opens and lets more air into the engine resulting in increased performance and propels the car from 0-62 mph in 4.3 seconds and has a maximum speed of 191 mph (307 km/h) and 183 mph (295 km/h) with TOUCHTRONIC 2’ transmission. In 2007, the British motoring show Top Gear sent the DBS around their famous test track and recorded a lap time of 1:23.9; 3.2 seconds faster than its predecessor the Vanquish S, and a second faster than the comparable Bentley Continental Supersports.
+       Aston Martin uses the same VH (vertical horizontal) structure as with the DB9, which provides strength and rigidity to the whole car. Thanks to the structure, 85% of the weight of the car is kept between the wheelbase, which results in increased handling, responsiveness and feel during tight cornering.
+Aston Martin has also developed an Adaptive Damping System, or ADS, which alters the suspension in order for the car to cope with the driver's desires and road/weather conditions. When turned on, the ADS automatically alters the suspension settings to ensure the driver has high levels of control at all times. Apart from the suspension getting stiffer, throttle and braking response is increased and steering is sharpened.
+The DBS is fitted with Pirelli P-Zero tyres developed especially for the car, along with lightweight, aluminium 20" wheels.
+To keep the weight as low as possible, Aston Martin has made extensive use of carbon fibre throughout the whole car. The bonnet, the boot, the front wings and the door opening surrounds are all made of carbon fibre. The carpets are also made by special thin layers made from carbon fibre. The roof and the doors are made of aluminium. The result is a 30 kg (66 lb) weight reduction from a regular DB9. The car is also fitted with a carbon fibre splitter at the front wings to increase handling and a carbon fibre rear diffuser to increase high-speed stability.
+The brake discs are carbon ceramic, which shaves a significant 12.5 kg (28 lb) from the unsprung weight. At the front, there are 398 mm (15.7 in) ventilated and drilled brakes with 6-piston alloy monobloc callipers. At the back, there are 360 mm (14.2 in) ventilated and drilled brakes with 4-piston alloy monobloc callipers.
+LDESC;
+        $sDesc = <<< SDESC
+   The modern Aston Martin DBS is a high performance GT sports car version of the DB9 from the UK manufacturer Aston Martin. Aston has used the DBS name once before on their 1967–72 grand tourer coupe. The modern car replaces the 2004 Vanquish S as the flagship of the marque.
+It was officially unveiled at the 2007 Pebble Beach Concours d'Elegance on 16 August 2007, which featured a brand new exterior colour, a graphite grey with a blue tint which has been dubbed "Casino Ice". Delivery began on 2008 Q1.
+The car is built in Gaydon, Warwickshire. Its engine is built at the Aston Martin engine plant in Cologne, Germany.
+SDESC;
+        $urls = <<< URLS
+   <li id="cite_note-0"><span class="mw-cite-backlink"><b><a href="#cite_ref-0">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://blackriverpost.com/read/news/4316/aston-martin-to-premiere-dbs-volante/">"Aston Martin to premiere DBS Volante - Canadian Driver"</a>. Blackriverpost.com<span class="printonly">. <a rel="nofollow" class="external free" href="http://blackriverpost.com/read/news/4316/aston-martin-to-premiere-dbs-volante/">http://blackriverpost.com/read/news/4316/aston-martin-to-premiere-dbs-volante/</a></span><span class="reference-accessdate">. Retrieved 2010-09-30</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Aston+Martin+to+premiere+DBS+Volante+-+Canadian+Driver&amp;rft.atitle=&amp;rft.pub=Blackriverpost.com&amp;rft_id=http%3A%2F%2Fblackriverpost.com%2Fread%2Fnews%2F4316%2Faston-martin-to-premiere-dbs-volante%2F&amp;rfr_id=info:sid/en.wikipedia.org:Aston_Martin_DBS_V12"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.detnews.com/article/20090829/AUTO03/908290301/1148/AUTO01/Aston+Martin+DBS+Volante++A+beautiful+idea">"Aston Martin DBS Volante - A beautiful idea - Detroit News/LA Times"</a>. The Detroit News<span class="printonly">. <a rel="nofollow" class="external free" href="http://www.detnews.com/article/20090829/AUTO03/908290301/1148/AUTO01/Aston+Martin+DBS+Volante++A+beautiful+idea">http://www.detnews.com/article/20090829/AUTO03/908290301/1148/AUTO01/Aston+Martin+DBS+Volante++A+beautiful+idea</a></span><span class="reference-accessdate">. Retrieved 2010-09-30</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Aston+Martin+DBS+Volante+-+A+beautiful+idea+-+Detroit+News%2FLA+Times&amp;rft.atitle=&amp;rft.pub=The+Detroit+News&amp;rft_id=http%3A%2F%2Fwww.detnews.com%2Farticle%2F20090829%2FAUTO03%2F908290301%2F1148%2FAUTO01%2FAston%2BMartin%2BDBS%2BVolante%2B%2BA%2Bbeautiful%2Bidea&amp;rfr_id=info:sid/en.wikipedia.org:Aston_Martin_DBS_V12"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation Journal">Paternie, Patrick C. (5 March 2012). "Velvet &amp; Carbon-Fiber Hammer". <i><a href="/wiki/Autoweek" title="Autoweek">Autoweek</a></i> <b>62</b> (5): 34–35.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Velvet+%26+Carbon-Fiber+Hammer&amp;rft.jtitle=%5B%5BAutoweek%5D%5D&amp;rft.aulast=Paternie&amp;rft.aufirst=Patrick+C.&amp;rft.au=Paternie%2C%26%2332%3BPatrick+C.&amp;rft.date=5+March+2012&amp;rft.volume=62&amp;rft.issue=5&amp;rft.pages=34%E2%80%9335&amp;rfr_id=info:sid/en.wikipedia.org:Aston_Martin_DBS_V12"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><span class="citation news"><a rel="nofollow" class="external text" href="http://www.astonmartin.com/thecompany/news?a=14d34f22-1324-4ca5-acbb-764f80c7d7f2">"Aston Martin DBS to star in new James Bond film"</a>. <i><a href="/wiki/Aston_Martin" title="Aston Martin">Aston Martin</a></i>. 2007. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20071214001503/http://www.astonmartin.com/thecompany/news?a=14d34f22-1324-4ca5-acbb-764f80c7d7f2">Archived</a> from the original on 14 December 2007<span class="printonly">. <a rel="nofollow" class="external free" href="http://www.astonmartin.com/thecompany/news?a=14d34f22-1324-4ca5-acbb-764f80c7d7f2">http://www.astonmartin.com/thecompany/news?a=14d34f22-1324-4ca5-acbb-764f80c7d7f2</a></span><span class="reference-accessdate">. Retrieved 2007-12-11</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Aston+Martin+DBS+to+star+in+new+James+Bond+film&amp;rft.jtitle=%5B%5BAston+Martin%5D%5D&amp;rft.date=2007&amp;rft_id=http%3A%2F%2Fwww.astonmartin.com%2Fthecompany%2Fnews%3Fa%3D14d34f22-1324-4ca5-acbb-764f80c7d7f2&amp;rfr_id=info:sid/en.wikipedia.org:Aston_Martin_DBS_V12"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.caranddriver.com/carnews/11852/spied-2008-aston-martin-dbs.html">"Spied 2008 Aston Martin DBS"</a>. Car and Driver<span class="printonly">. <a rel="nofollow" class="external free" href="http://www.caranddriver.com/carnews/11852/spied-2008-aston-martin-dbs.html">http://www.caranddriver.com/carnews/11852/spied-2008-aston-martin-dbs.html</a></span><span class="reference-accessdate">. Retrieved 2010-09-30</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Spied+2008+Aston+Martin+DBS&amp;rft.atitle=&amp;rft.pub=Car+and+Driver&amp;rft_id=http%3A%2F%2Fwww.caranddriver.com%2Fcarnews%2F11852%2Fspied-2008-aston-martin-dbs.html&amp;rfr_id=info:sid/en.wikipedia.org:Aston_Martin_DBS_V12"><span style="display: none;">&#160;</span></span></span></li>
+URLS;
+        $car->setLongDescription($lDesc);
+        $car->setShortDescription($sDesc);
+        $car->setUrls($urls);
+        $car->setVendor($manager->merge($this->getReference('am_vnd')));
+        $manager->persist($car);
+        $manager->flush();
+    }
+    
+    public function getOrder() {
+        return 58;
+    }
+}
+
+?>

@@ -1,0 +1,29 @@
+{% set loopIndex = 0 %}
+{%if divisible is not defined%}
+{% set divisible = 4 %}
+{% endif %}
+{% if span is not defined %}
+{% set span = 2 %}
+{% endif %}
+<ul class="thumbnails">
+    {% for car in cars %}
+    {% if loopIndex is not divisibleby(divisible) and loopIndex != 0 %}
+        <li class="span{{span}}">
+            <div class="thumbnail">
+                <a href="{{ path('cars', {'slug':car.slug}) }}" class="thumbnail">
+                    <img src="{{ car.image }}" alt="">
+                </a>
+                <div class="caption">
+                    <a href="{{ path('cars', {'slug':car.slug}) }}"><h5>{{ car.name}}</h5></a>
+                </div>
+            </div>
+        </li>
+        {% elseif loopIndex != 0 %}
+    </ul>
+    <ul class="thumbnails">
+        {% endif %}
+        {% set loopIndex = loopIndex + 1 %}
+        {% endfor %}
+            {% if loopIndex != 0 %}
+        </ul>
+        {% endif %}

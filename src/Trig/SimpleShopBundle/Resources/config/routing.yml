@@ -1,0 +1,33 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: TrigSimpleShopBundle:Home:main }
+vendors:
+    pattern:  /vendors/{slug}/{cars}
+    defaults: { _controller: TrigSimpleShopBundle:Home:vendors, slug: "none", cars: "none" }
+    requirements: 
+      cars: cars|none
+cars:
+    pattern:  /cars/{slug}
+    defaults: { _controller: TrigSimpleShopBundle:Home:cars, slug: "none" }
+_admin_login:
+    pattern: /admin/login
+    defaults: { _controller: TrigSimpleShopBundle:Admin:login }
+_admin_home:
+    pattern:  /admin
+    defaults: { _controller: TrigSimpleShopBundle:Admin:index }
+_admin_addCategory:
+    pattern: /admin/category/add
+    defaults: { _controller:  TrigSimpleShopBundle:Admin:addCategory }
+_admin_removeCategory:
+    pattern: /admin/category/remove
+    defaults: { _controller:  TrigSimpleShopBundle:Admin:removeCategory }
+_admin_addProduct:
+    pattern: /admin/product/add
+    defaults: { _controller:  TrigSimpleShopBundle:Admin:addProduct }
+_admin_removeProduct:
+    pattern: /admin/category/remove
+    defaults: { _controller:  TrigSimpleShopBundle:Admin:removeProduct }
+_admin_logout:
+    pattern: /admin/logout
+    defaults: { _controller: TrigSimpleShopBundle:Admin:logout }
+

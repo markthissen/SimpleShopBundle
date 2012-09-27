@@ -1,0 +1,19 @@
+{% extends 'TrigSimpleShopBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+    <div class="row span4">
+{% include 'TrigSimpleShopBundle::nav.vendors.html.twig' with {'vendors': vendors } %}
+        </div>
+        <div style="text-align: justify" class="row span7 offset1">
+            <h2 style="position:relative;left:-22px">Cars owerview:</h2>
+            <div class="row">
+                <h3>{{randomVendor.name}}</h3>
+                <a href="{{ path('vendors', {'slug':randomVendor.slug}) }}"><button class="btn btn-warning">view details...</button></a>
+                <hr />
+                <img width="200" style="float:left;margin:10px 10px 0 0"src="{{ randomVendor.logo }}" />
+                </h4>Short description:</h4>
+                <p class="text-info">{{ randomVendor.description }}</p>   
+            </div>
+        </div>
+    </div>
+{% endblock %}

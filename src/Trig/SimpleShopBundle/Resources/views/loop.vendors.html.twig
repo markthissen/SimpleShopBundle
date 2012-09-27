@@ -1,0 +1,23 @@
+{% set loopIndex = 0 %}
+<ul class="thumbnails">
+        {% for venor in vendors %}
+        {% if loopIndex is not divisibleby(4) and loopIndex != 0 %}
+    <li class="span2">
+        <div class="thumbnail">
+            <a href="{{ path('vendors', {'slug':venor.slug}) }}" class="thumbnail">
+                <img src="{{ venor.logo }}" alt="">
+            </a>
+            <div class="caption">
+                 <a href="{{ path('vendors', {'slug':venor.slug}) }}"><h6>{{ venor.name}}</h6></a>
+            </div>
+        </div>
+    </li>
+            {% elseif loopIndex != 0 %}
+</ul>
+<ul class="thumbnails">
+        {% endif %}
+        {% set loopIndex = loopIndex + 1 %}
+        {% endfor %}
+            {% if loopIndex != 0 %}
+</ul>
+        {% endif %}

@@ -1,0 +1,7 @@
+bin/
+nbproject/
+vendor/
+web/
+app/cache/
+src/Trig/SimpleShopBundle/Resources/public/
+composer.phar

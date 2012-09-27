@@ -1,0 +1,30 @@
+{% extends 'TrigSimpleShopBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+    <div class="row span4">
+{% include 'TrigSimpleShopBundle::nav.cars.html.twig' with {'cars': cars } %}
+        </div>
+        <div style="text-align: justify" class="row span7 offset1">
+            <h2 style="position:relative;left:-22px">{{mainCar.name}}</h2>
+            <p>price: <span class="badge badge-warning">{{ mainCar.price|price}} $</span></p>
+            <div class="row">
+                    <hr />
+                    <img style="float:left;margin:10px 10px 0 0"src="{{ mainCar.image }}" />
+                    </h4>Short description:</h4>
+                    <p class="text-info">{{ mainCar.shortDescription }}</p>   
+            </div>
+            <div class="row">
+                <hr />
+                </h4>Full description:</h4>
+                <p>{{ mainCar.longDescription }}</p>   
+            </div>
+            <hr />
+            <h4>Urls:</h4>
+            <div class="row">
+                <ul>
+                {{ mainCar.urls|raw }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+{% endblock %}

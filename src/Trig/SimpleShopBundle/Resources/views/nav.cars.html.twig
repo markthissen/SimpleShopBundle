@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs nav-stacked span4">
+{% for car in cars %}
+        <li><img style="float:left;margin:2px" width="40" src="{{ car.image }}" />
+            <a class="inline" href="{{ path('cars', {'slug': car.slug})}} ">{{ car.name }}</a></li>
+{% endfor %}
+    </ul>

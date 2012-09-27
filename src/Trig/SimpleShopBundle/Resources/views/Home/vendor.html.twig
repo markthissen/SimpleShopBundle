@@ -1,0 +1,15 @@
+{% extends 'TrigSimpleShopBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+    <div class="row span4">
+{% include 'TrigSimpleShopBundle::nav.vendors.html.twig' with {'vendors': vendors } %}
+        </div>
+        <div style="text-align: justify" class="row span7 offset1">
+            <h2 style="position:relative;left:-22px">{{mainVendor.name}}</h2>
+            <div class="row">
+                <hr />
+                <img style="float:left;margin:10px 10px 0 0"src="{{ mainVendor.logo }}" />
+                </h4>Short description:</h4>
+                <p class="text-info">{{ mainVendor.description }}</p>   
+            </div>
+{% endblock %}
