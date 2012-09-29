@@ -1,10 +1,10 @@
 parameters:
     database_driver:   pdo_mysql
-    database_host:     localhost
+    database_host:     db10.freehost.com.ua
     database_port:     ~
-    database_name:     simpleshop
-    database_user:     root
-    database_password: vb45nm67
+    database_name:     petrovchanka_dev
+    database_user:     petrovchanka_dev
+    database_password: lQx7pOOAe
 
     mailer_transport:  smtp
     mailer_host:       ubuntu.dev
