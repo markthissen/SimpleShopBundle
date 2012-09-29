@@ -8,3 +8,4 @@ web/uploads/*
 web/bundles/*
 src/Trig/SimpleShopBundle/Resources/public/
 composer.phar
+app/config/parameters*
