@@ -1,7 +1,10 @@
 bin/
 nbproject/
-vendor/
-web/
-app/cache/
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
 src/Trig/SimpleShopBundle/Resources/public/
 composer.phar
