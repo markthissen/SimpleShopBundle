@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -172,3 +173,9 @@ Enjoy!
 [13]: http://jmsyst.com/bundles/JMSSecurityExtraBundle/master
 [14]: http://jmsyst.com/bundles/JMSDiExtraBundle/master
 [15]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html
+=======
+SimpleShopBundle
+================
+
+Simple online shop, that powered by symfony framework and twitter bootstrap
+>>>>>>> a598a1539bf15fc563c9dde281b7fff8098d2f25
